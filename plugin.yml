@@ -1,0 +1,134 @@
+name: DataTchat
+description: C'est un plugin qui sauvegarde des donnees personnalisees pour les afficher dans le tchat / This is a plugin for save custom data for display its in the chat
+version: ALPHA 1.5
+author: Synol_
+main: fr.synol.datatchat.MainPlugin
+commands:
+  #
+  # For all
+  #
+  DTHelp:
+    description: help message / message d'aide
+    permission: DataTchat.commandshelp.dthelp
+    usage: "Usage : /help <pageNumber>"
+  DTInfo:
+    description: show advanced help message for a command / montre le message d'aide avance d'une commande
+    permission: DataTchat.commandshelp.dtinfo
+    usage: "Usage : /info <command>"
+  setLangage:
+    description: set the user langage / modifie la langue d'un utilisateur
+    permission: DataTchat.commandshelp.setlangage
+    usage: "Usage : /setLangage <langage>  (example: en)"
+  #
+  # For User
+  # 
+  addData:
+    description: add a new data for player / ajoute une donnee au joueur
+    permission: DataTchat.commands.addData
+    usage: "Usage : /addData <NewData>"
+  removeData:
+    description: remove a data for player / retire une donnee au joueur
+    permission: DataTchat.commands.removeData
+    usage: "Usage : /removeData <lastData | all | %lastAdminData>"
+  #setData:
+    #description: set a existing data for player / modifie une donnee existante au joueur
+    #permission: DataTchat.commands.setData
+    #usage: "Usage : /setData <numberOfData> <new Data>"
+  showDataInTchat:
+    description: enable or disable the automatic showing custom data in chat / activer ou desactiver l'affichage automatique des donnees personnalisees dans tchat
+    permission: DataTchat.commands.showdataintchat
+    usage: "Usage : /showDataInTchat [toggle | true | false]"
+  showDataWhen:
+    description: enable or disable the showing custom data in chat when chosen event / enable or disable the showing custom data in tchat when chosen event
+    permission: DataTchat.commands.showdatawhen
+    usage: "Usage : /showDataWhen [join | worldChanged | leaveBed | respawn] [toggle | true | false]"
+  showMyData:
+    description: show custom data in chat / montre les donnees personnalisees dans tchat
+    permission: DataTchat.commands.showmydata
+    aliases: smd
+    usage: "Usage : /showMyData"
+  restorAdminData:
+    description: restor deleted admin data / restaure le donnee administrateur supprimee
+    permission: DataTchat.commands.restoradmindata
+    usage: "Usage : /restorAdminData <AdminData> or nothing for view list"
+  #
+  # For Admin
+  #
+  addDataForAll:
+    description: add a new data for all players / ajoute une donnee pour tout les joueurs
+    permission: DataTchat.commandsadmin.adddataforall
+    usage: "Usage : /addDataForAll <NewData>"
+  removeDataForAll:
+    description: remove a data for all players / retire une donnee pour tout les joueurs
+    permission: DataTchat.commandsadmin.removedataforall
+    usage: "Usage : /removeDataForAll <lastAdminData | all(AdminData) | %lastPlayerData>"
+  #setDataForAll:
+    #description: set a existing data for all players / modifie une donnee existante a tous les joueurs
+    #permission: DataTchat.commandsadmin.setdataforall
+    #usage: "Usage : /setDataForAll <last Data> <%new Data>"
+  addDataFor:
+    description: add a new data for one player / ajoute une donnee pour un joueur
+    permission: DataTchat.commandsadmin.adddatafor
+    usage: "Usage : /addDataFor <playerName> <NewData>"
+  removeDataFor:
+    description: remove a data for one player / retire une donnee pour un joueur
+    permission: DataTchat.commandsadmin.removedatafor
+    usage: "Usage : /removeDataFor <playerName> <last Data | all>"
+  #setDataFor:
+    #description: set a existing data for one player / modifie une donnee existante pour un joueur
+    #permission: DataTchat.commandsadmin.setdatafor
+    #usage: "Usage : /setDataFor <last Data> <new Data>"
+  allowRemoveAdminData:
+    description: allow to remove admin data for user / permettre de supprimer les donnees des administrateurs pour l'utilisateur
+    permission: DataTchat.commandsadmin.allowremoveadmindata
+    usage: "Usage : /allowRemoveAdminData [all | playerName] [toggle | true | false]"
+  showData:
+    description: show player custom data in chat / montre les donnees personnalisees d'un joueur dans tchat
+    permission: DataTchat.commandsadmin.showdata
+    usage: "Usage : /showData <playerName>"
+  setDefaultLangage:
+    description: set default langage / modifie le langage par defaut
+    permission: DataTchat.commandsadmin.setdefaultlangage
+    usage: "Usage : /setDefaultLangage <langage>"
+  setMaxData:
+    description: set limit data per player / modifie la limite de donnee par joueur
+    permission: DataTchat.commandsadmin.setmaxdata
+    usage: "Usage : /setMaxData <newValue>"
+  saveConfig:
+    description: save config file / sauvegarde le fichier de config
+    permission: DataTchat.commandsadmin.saveconfig
+    usage: "Usage : /saveConfig"
+permissions:
+  DataTchat.commandshelp.*:
+    description: All help commands
+    default: true
+    children:
+      DataTchat.commandshelp.dthelp: true
+      DataTchat.commandshelp.dtinfo: true
+      DataTchat.commandshelp.setlangage: true
+  DataTchat.commands.*:
+    description: All user commands
+    default: true
+    children:
+      DataTchat.commands.adddata: true
+      DataTchat.commands.removedata: true
+      DataTchat.commands.setdata: true
+      DataTchat.commands.showmydata: true
+      DataTchat.commands.showdataintchat: true
+      DataTchat.commands.showdatawhen: true
+      DataTchat.commands.restorAdminData: true
+  DataTchat.commandsadmin.*:
+    description: All admin commands
+    default: op
+    children:
+      DataTchat.commandsadmin.adddataforall: true
+      DataTchat.commandsadmin.adddatafor: true
+      DataTchat.commandsadmin.removedataforall: true
+      DataTchat.commandsadmin.removedatafor: true
+      DataTchat.commandsadmin.setdataforall: true
+      DataTchat.commandsadmin.setdatafor: true
+      DataTchat.commandsadmin.showdata: true
+      DataTchat.commandsadmin.allowremoveadmindata: true
+      DataTchat.commandsadmin.setdefaultlangage: true
+      DataTchat.commandsadmin.setmaxdata: true
+      DataTchat.commandsadmin.saveconfig: true

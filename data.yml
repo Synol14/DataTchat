@@ -1,0 +1,25 @@
+admin:
+  data:
+  - 'Use commande /addData <NewData> ! '
+
+players:
+  00000000-0000-0000-0000-000000000000:
+    name: Test
+    msgnumber: 2
+    data:
+    - 'Hello world ! '
+    - 'test 1, 2 ! '
+    personalAdminData:
+    - 'Je ne suis pas supprimé ! '
+    - 'J'ai été supprimé par Test ! '
+    noAdminData:
+    - 'Je suis supprimé par Test ! '
+    setting:
+      allowRemoveAdminData: true
+      enableInTchat: true
+      enableWhen:
+        join: true
+        worldChanged: false
+        leaveBed: true
+        respawn: true
+      langage: fr

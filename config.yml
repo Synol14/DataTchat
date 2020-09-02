@@ -1,0 +1,176 @@
+setting:
+  defaultAllowRemoveAdminData: true
+  #                   0=null
+  limitDataPerPlayer: 0
+  defaultLangage: fr
+  # NO MAJ !!
+  langageList:
+  - fr
+  - en
+message:
+  fr:
+    creationFile: "&aCréation de votre fichier . . ."
+    createdFile: "&aFichier créé !"
+    savedData: "&aDonnée enregistrée !"
+    errorSavedData: "&4Une erreur est survenu ! Veuillez réessayer et/ou contacter l'administrateur"
+    deletedData: "&4Vous avez supprimé : &r%deletedData%"
+    deletedAllData: "&4Toutes les données ont été détruite !"
+    allRestored: "&a Toutes les données ont été restauré !"
+    setData: "&aVous avez modifier la donnée &r&o%lastData% &apour &r&o%newData%"
+    settingChanged: "&r&o%settingTitle% &r&eest établi à &r%value%"
+    langageChanged: "&aLa langue a été changer pour &r%langage% &a!"
+    noData: "&4  Vous n'avez aucune donnée !\n&b  -> Vous pouvez utilisez la commande\n     &r/addData <NewData>\n&b     pour en ajouter !"
+    noThisData: "&4 Aucune donnée correspondante a été trouvé !"
+    noPermission: "&4 Vous n'avez pas la permision pour cela !"
+    noLangage: "&e Aucune langue a été trouvé !"
+    maxData: "&4 Vous avez atteint la limite de donnée par joueur"
+    noPage: "&eIl n'y a pas de page &r%page% &e!"
+    noPlayer: "&4 Aucun joueur trouvé !"
+    error: "&4 Une erreur est survenu !"
+  en:
+    creationFile: "&aCreation of your file . . ."
+    createdFile: "&aFile created !"
+    savedData: "&aRecorded data !"
+    errorSavedData: "&4An error occurred ! Please try again and/or contact the administrator"
+    deletedData: "&4You deleted : &r%deletedData%"
+    deletedAllData: "&4Deleted all data !"
+    allRestored: "&a All data has been restored !"
+    setData: "&aYou have modified the data &r&o%lastData% &afor &r&o%newData%"
+    settingChanged: "&r&o%settingTitle% &r&eis set to &r%value%"
+    langageChanged: "&aThe language has been changed to &r%langage% &a!"
+    noData: "&4  You don't have any data !\n&b  -> You can use the command\n     &r/addData <NewData>\n&b     to add some !"
+    noThisData: "&4 No matching data was found!"
+    noPermission: "&4 You don't have permission !"
+    noLangage: "&e No matching langage was found !"
+    maxData: "&4 You have reached the data limit per player"
+    noPage: "&eThere is no page &r%page% &e!"
+    noPlayer: "No player was found !"
+    error: "&4 An error occurred !"
+
+# un élément d'une liste correspond à une ligne
+helpPage:
+  fr:
+    1:
+    - "&r/DTHelp <page> &bpour afficher cette page"
+    - "&r/DTInfo <command> &bpour affichier plus d'information sur une commande"
+    - "&r/setLangage <langage> &bpour changer sa langue"
+    - "&r/addData <newData> &bpour ajouter une donnée"
+    - "&r/removeData <lastData|all|%lastAdminData> &bpour supprimer une donnée"
+    - "&r/restorAdminData <adminData> &bpour restaurer une donnée administrateur"
+    - "&r/showMyData &bpour afficher toutes vos données"
+    - "&r/showDataInTchat &bpour activer/désactiver le \"showMyData\" automatique"
+    - "&r/showDataWhen &bpour activer/désactiver le \"showMyData\" automatique lors d'un évenement"
+    2:
+    - "&4 -> Commandes Administrateurs"
+    - "&r/addDataForAll <NewData> &epour ajouter une donnée admin visible par tous"
+    - "&r/removeDataForAll <lastData|all> &epour supprimer une donnée admin visible par tous"
+    - "&r/addDataFor <playerName> <NewData|all> &epour ajouter une donnée admin visible par un seul joueur"
+    - "&r/removeDataFor <playerName> <lastData|all> &epour supprimer une donnée admin visible par un seul joueur"
+    - "&r/allowRemoveAdminData [all|playerName] [toggle|true|false] &eautoriser / interdir la suppression de donnée admin"
+    - "&r/showData <playerName> &emontre les données d'un joueur"
+    - "&r/setMaxData <NewValue> &emodifie le nombre max de donnée par joueur"
+    - "&r/setDefaultLangage <langage> &emodifie le langage par defaut"
+    - "&r/saveConfig &esavegarde le fichier de config"
+  en:
+    1:
+    - "&r/DTHelp <page> &bfor display this page"
+    - "&r/DTInfo <command> &bfor display more information about a command"
+    - "&r/setLanguage <language> &bfor change its language"
+    - "&r/addData <newData> &bfor add data"
+    - "&r/removeData <lastData | all |% lastAdminData> &bfor remove a data"
+    - "&r/restorAdminData <adminData> &bfor restore administrator data"
+    - "&r/showMyData &bfor display all your data"
+    - "&r/showDataInTchat &bfor enable/disable the automatic \"showMyData\""
+    - "&r/showDataWhen &bfor  enable/disable the automatic \"showMyData\" during an event"
+    2:
+    - "&4 -> Admin Commands"
+    - "&r/addDataForAll <NewData> &efor add admin data visible by all"
+    - "&r/removeDataForAll <lastData|all> &efor remove admin data visible by all"
+    - "&r/addDataFor <playerName> <NewData|all> &efor remove admin data visible by one player"
+    - "&r/removeDataFor <playerName> <lastData|all> &efor remove admin data visible by one player"
+    - "&r/allowRemoveAdminData [all|playerName] [toggle|true|false] &eallow / forbid to remove admin data"
+    - "&r/showData <playerName> &eshow player's data"
+    - "&r/setMaxData <NewValue> &eset max data per player"
+    - "&r/setDefaultLangage <langage> &eset default langage"
+    - "&r/saveConfig &esave config file"
+    
+# NO MAJ !!
+infoPage:
+  fr:
+    adddata:
+    - "&r/addData <newData> &bpour ajouter une nouvelle donnée"
+    - "&a -> exemple :"
+    - "&r /addData j'aime le chocolat !"
+    - "&bVous pouvez également y mettre des couleurs :&r"
+    - "%noColor%/addData &4Rouge &1Bleu Foncé &eJaune &aVert &oItalique"
+    - "&r        &4Rouge &1Bleu Foncé &eJaune &aVert &oItalique"
+    removedata:
+    - "&r/removeData <lastData|all|%lastAdminData> &bpour supprimé une donnée"
+    - "&a -> exemple :"
+    - "&r/removeData j'aime le chocolat"
+    - "&b  Supprimera \"j'aime le chocolat\" de votre liste"
+    - "&r/removeData all"
+    - "&b  Supprimera toutes vos données"
+    - "&r/removeData %message d'un admin"
+    - "&b  Supprimera \"message d'un admin\" de votre liste si vous en êtes autorisé"
+    - "&4->Attention : &ble % est obligatoire et ne compte pas dans le message"
+    - "&4->Attention : &bSi le message à supprimer a des couleurs, il faut les mettre aussi"
+    showmydata:
+    - "&r/showMyData &bpour montrer ses données"
+    - " &e-> &r/smd &best un alias"
+    - " &e-> &bvos données se montre par defaut"
+    - "&blorsque vous rejoiniez la partie, quand"
+    - "vous changez de monde, quand vous quitter"
+    - "un lit et quand vous respawn !"
+    - " &e-> &aceci est configurable..."
+    showdataintchat:
+    - "&r/showDataInTchat [toggle|true|false] &bpour activer/désactiver l'affichage automatique"
+    - "&a -> exemple :"
+    - "&r/showDataInTchat &a| &r/showDataInTchat toggle"
+    - "&binverse l'état du parametre"
+    - "&r/showDataInTchat true"
+    - "&bmet le parametre a &etrue"
+    - "&r/showDataInTchat false"
+    - "&bmet le parametre a &efalse"
+    - " &e-> &rtrue &bpar defaut"
+    showdatawhen:
+    - "&r/showDataWhen [join|worldChanged|leaveBed|respawn] [toggle|true|false]"
+    - "&bpour activer/desactiver l'affichage automatique lors d'événements"
+    - "&a -> exemple :"
+    - "&r/showDataWhen &ejoin &r[toggle|true|false]"
+    - "&bactive/desactive l'affichage auto losque vous rejoiniez la partie"
+    - "&r/showDataWhen &echangeWorld &r[toggle|true|false]"
+    - "&bactive/desactive l'affichage auto losque vous changer de monde"
+    - "&r/showDataWhen &eleaveBed &r[toggle|true|false]"
+    - "&bactive/desactive l'affichage auto losque vous quittez un lit"
+    - "&r/showDataWhen &erespawn &r[toggle|true|false]"
+    - "&bactive/desactive l'affichage auto losque vous réapparaissez"
+    restoradmindata:
+    - "&r/restorAdminData <AdminData> ou rien pour voir la liste"
+    - "&blosque vous supprimer des données administrateurs en réalité"
+    - "une liste noir est créé donc vous pouvez les restaurer"
+    - "&a -> exemple :"
+    - "&r/restorAdminData"
+    - "&bmontre la liste noir des données admin"
+    - "&r/restorAdminData j'ai été supprimé"
+    - "&brestaure \"j'ai été supprimé\""
+    - "&4->Attention : &bSi le message à restaurer a des couleurs, il faut les mettre aussi"
+  en:
+    adddata:
+    - "&r/addData <newData> &bfor add a new data"
+    - "&r example :"
+    - "&a /addData I like chocolate !"
+    - "&bYou can too use color :&r"
+    - "%noColor%  /addData &4Red &1Dark Blue &eYellow &aGreen &oItalic"
+    - "&r    &4Red &1Dark Blue &eYellow &aGreen &oItalic"
+    removedata:
+    - "&r/removeData <lastData|all|%lastAdminData> &bfor remove data"
+    - "&a -> example :"
+    - "&r/removeData I like chocolate"
+    - "&b  Will delete \"I like chocolate\" "
+    - "&r/removeData all"
+    - "&b   Will delete all data"
+    - "&r/removeData %admin's message"
+    - "&b  Will delete \"admin's message\" if you are authorized"
+    - "&4->Warning : &b% is obligatory and isn't in the message"
+    - "&4->Warning : &bif the deleted message has colors, you must add them"
